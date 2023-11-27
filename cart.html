@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+	
+	<link rel="stylesheet" href="style.css">
+ 	<link rel="stylesheet" href="css/cart.css">
+	
+	<script src="./js/compras.js"></script>
+ 	<script src="./js/cartService.js" defer></script>
+	<script src="./js/cart.js" defer></script>
+	<title>Lapiz y Pincel</title>
+</head>
+<body>
+	<header>
+		<nav>
+			<a href="./index.html"><img src="./img/1.png" alt="Logo" id="logo"></a>
+			<div>
+				<ul id="navbar">
+
+					<li><a href="index.html">Inicio</a></li>
+					<li><a href="compras.html">Catalogo</a></li>
+					<li><a href="admin.html">Admin</a></li>
+				   
+				   </ul>
+				<a href="./cart.html" id="cart"><img src="./img/iconos/shopping-cart.png" alt=""><span id="cuenta-carrito">0</span></a>
+			</div>
+		</nav>
+	</section>
+	
+	<main>
+		<p id="carrito-vacio">Ups! El carrito está vacío, <a href="compras.html">elige algunos productos</a></p>
+		<section id="cart-container">
+		</section>
+ 	<section id="totales">
+    <p>Total unidades: <span id="cantidad">0</span></p>
+    <p>Total precio: $<span id="precio">0</span></p>
+    <button onclick="redirigir()">Comprar</button>
+    <button id="reiniciar">Reiniciar</button>
+  	</section>
+	</main>
+
+<footer>
+	<div class="footer-container">
+	  <div class="footer-left">
+		<h3>Contacto</h3>
+		<p>Dirección: Calle Principal, Ciudad</p>
+		<p>Teléfono: 123-456-7890</p>
+		<p>Email: info@papeleria.com</p>
+	  </div>
+	  <div class="footer-right">
+		<h3>Horario de atención</h3>
+		<p>Lunes a Viernes: 9am - 6pm</p>
+		<p>Sábados: 10am - 4pm</p>
+		<p>Domingos: Cerrado</p>
+	  </div>
+	</div>
+	<div class="footer-bottom">
+	  <p>&copy; 2023 Papelería Lapiz y pincel. Todos los derechos reservados.</p>
+	</div>
+  </footer>
+
+</body>
+</html>

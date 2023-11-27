@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="style.css">
+ 	<link rel="stylesheet" href="css/cart.css">
+	<link rel="stylesheet" href="css/pago.css">
+
+	<script src="./js/compras.js"></script>
+	<script src="./js/cartService.js" defer></script>
+	<script src="./js/cart.js" defer></script>
+	<script src="./js/pago.js" defer></script>
+	<title>Lapiz y Pincel</title>
+</head>
+<body>
+	<header>
+		<nav>
+			<a href="./index.html"><img src="./img/1.png" alt="Logo" id="logo"></a>
+			<div>
+				<ul id="navbar">
+					<li><a href="index.html">Inicio</a></li>
+					<li><a href="compras.html">Catalogo</a></li>
+					<li><a href="admin.html">Admin</a></li>
+				</ul>
+				<a href="./cart.html" id="cart"><img src="./img/iconos/shopping-cart.png" alt=""><span id="cuenta-carrito">0</span></a>
+			</div>
+		</nav>
+	</header>
+	<main>
+		<p id="carrito-vacio">Ups! El carrito está vacío, <a href="compras.html">elige algunos productos</a></p>
+		<section id="cart-container">
+		</section>
+ 	<section id="totales">
+    	<p>Total unidades: <span id="cantidad">0</span></p>
+    	<p>Total precio: $<span id="precio">0</span></p>
+	</section>
+	<form method="POST" action="guardar.php">
+		<div class="form-group">
+		  <label for="nombre">Nombre:</label>
+		  <input type="text" id="nombre" name="nombre" required>
+		</div>
+		<div class="form-group">
+		  <label for="direccion">Dirección:</label>
+		  <input type="text" id="direccion" name="direccion" required>
+		</div>
+		<div class="form-group">
+		  <label for="correo">Correo Electrónico:</label>
+		  <input type="email" id="correo" name="correo" required>
+		</div>
+		</form>
+		<h3>Numero de Nequi: 3204562474</h3>
+		<form action="/subir-imagen" method="post" enctype="multipart/form-data" onsubmit="return validarPago()">
+			<label for="imagen" class="custom-file-upload">
+			  <input type="file" name="imagen" id="imagen">
+			  COMPROBANTE DE PAGO
+			</label>
+		</form>
+		<button onclick="mostrarAlerta()">Realizar Pedido</button>
+</body>
+</html>
